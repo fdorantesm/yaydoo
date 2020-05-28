@@ -9,7 +9,7 @@ module.exports = {
   externals: ['express'],
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'index.js'
+    filename: 'index.js',
   },
   resolve: {
     extensions: ['.ts', '.js'],
@@ -17,11 +17,19 @@ module.exports = {
   module: {
     rules: [
       {
+        enforce: 'pre',
         test: /\.ts$/,
-        use: [
-          'ts-loader',
-        ]
-      }
-    ]
-  }
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+        options: {
+          failOnError: true,
+        },
+      },
+      {
+        test: /\.ts$/,
+        exclude: /node_modules/,
+        use: ['ts-loader'],
+      },
+    ],
+  },
 }

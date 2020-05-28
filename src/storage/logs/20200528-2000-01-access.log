@@ -1,0 +1,6 @@
+::ffff:127.0.0.1 - - [29/May/2020:00:59:37 +0000] "GET / HTTP/1.1" 200 1 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:76.0) Gecko/20100101 Firefox/76.0"
+::ffff:127.0.0.1 - - [29/May/2020:00:59:38 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:76.0) Gecko/20100101 Firefox/76.0"
+::ffff:127.0.0.1 - - [29/May/2020:00:59:47 +0000] "GET / HTTP/1.1" 200 1 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:76.0) Gecko/20100101 Firefox/76.0"
+::ffff:127.0.0.1 - - [29/May/2020:00:59:47 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:76.0) Gecko/20100101 Firefox/76.0"
+::ffff:127.0.0.1 - - [29/May/2020:00:59:50 +0000] "GET / HTTP/1.1" 200 1 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:76.0) Gecko/20100101 Firefox/76.0"
+::ffff:127.0.0.1 - - [29/May/2020:00:59:50 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:76.0) Gecko/20100101 Firefox/76.0"
