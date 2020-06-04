@@ -1,0 +1,5 @@
+{
+    "/auth/me": "GET",
+    "/auth/facebook": "POST",
+    "/user/posts": "GET"
+}

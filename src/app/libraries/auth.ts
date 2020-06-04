@@ -10,7 +10,7 @@ const ROOT_PATH = process.env.ROOT_PATH
 
 let signature: Buffer | string
 const options = {
-  expiresIn: APP_SECURE_EXPIRATION,
+  expiresIn: APP_SECURE_EXPIRATION || '1d',
 }
 
 try {

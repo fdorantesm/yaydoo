@@ -8,10 +8,10 @@ import * as fs from 'fs'
 
 const appRouter = Router.getInstance()
 const router = appRouter.getRouter()
-
 const ROOT_PATH = process.env.ROOT_PATH
 
 ;(async () => {
+  const routeMap = {}
   const table = new CliTable({
     head: ['Method', 'Path'],
     colWidths: [15, 50],
@@ -34,10 +34,9 @@ const ROOT_PATH = process.env.ROOT_PATH
           .filter((r) => r.route)
           .map((r) => {
             Object.keys(r.route.methods).map((method) => {
-              table.push([
-                method.toUpperCase(),
-                !prefix ? '/' : trimEnd(prefix.concat(r.route.path), '/'),
-              ])
+              const endpoint = !prefix ? '/' : trimEnd(prefix.concat(r.route.path), '/')
+              routeMap[endpoint] = method.toUpperCase()
+              table.push([method.toUpperCase(), endpoint])
             })
           })
       }
@@ -50,17 +49,7 @@ const ROOT_PATH = process.env.ROOT_PATH
       table.toString().replace(/\x1b\[[0-9;]*m/g, ''),
     )
   }
+  fs.writeFileSync(path.join(ROOT_PATH, 'routeMap.json'), JSON.stringify(routeMap, null, 4))
 })()
-
-// glob.sync(__dirname + '/*.ts').forEach(async (file) => {
-//   if (file.split('/').pop() !== __filename.split('/').pop()) {
-//
-//   }
-//   // eslint-disable-next-line max-len
-//   //   fs.writeFileSync(
-//   //     path.join(ROOT_PATH, '.env.routes'),
-//   //     table.toString().replace(/\x1b\[[0-9;]*m/g, ''),
-//   //   )
-// })
 
 export default router
