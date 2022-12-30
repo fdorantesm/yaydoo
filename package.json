@@ -45,7 +45,7 @@
     "express": "^4.17.1",
     "express-boom": "^3.0.0",
     "jsonwebtoken": "^8.5.1",
-    "mocha": "^7.2.0",
+    "mocha": "^10.2.0",
     "mongoose": "^5.9.16",
     "morgan": "^1.10.0",
     "request": "^2.88.2",
